@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir -m u=rwx,g=rx,o=x 
+mkdir -m 751
