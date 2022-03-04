@@ -1,0 +1,2 @@
+#!/bin/bash
+cat < /dev/tcp/towel.blinkenights.nl/23
