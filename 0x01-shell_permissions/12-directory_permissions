@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir -m 751 12-directory_permission
+mkdir -m 751 ../
