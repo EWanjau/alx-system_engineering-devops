@@ -3,7 +3,7 @@
 
 hrs_counter=0
 
-while [ $hrs_counter -lt 12 ]
+while [ $hrs_counter -le 12 ]
 do
     echo "Hour: $hrs_counter"
         min_counter=1
