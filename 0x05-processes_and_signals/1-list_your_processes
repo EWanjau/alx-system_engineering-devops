@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#script that lists all running processes in hierachy
+
+ps -eLf
