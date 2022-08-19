@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#script that displays a string to infinity
+counter=0
+while [ $counter -eq 0 ]
+do
+    echo "To infinity and beyond"
+done
