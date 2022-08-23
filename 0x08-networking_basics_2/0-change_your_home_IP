@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+#this sript changes localhost to 127.0.0.2 and fb to 8.8.8.8
