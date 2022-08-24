@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#this script listens to port 127.0.0.1
+nc -l localhost 98
