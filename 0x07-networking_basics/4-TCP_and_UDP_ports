@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#listening ports and their PID processes
-netstat -lp

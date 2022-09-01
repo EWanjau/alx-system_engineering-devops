@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-#the script prints "Best School"ten times a string
-for((v=1; v<=10; v++)) 
-do
-    echo 'Best School'
-done

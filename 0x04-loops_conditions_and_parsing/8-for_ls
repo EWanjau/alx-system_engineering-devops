@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#the script prints hours and minutes
-
-for val in *
-do
-  echo "$val" | cut -d '-' -f2
-done
