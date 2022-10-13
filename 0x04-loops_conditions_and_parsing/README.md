@@ -8,5 +8,4 @@ This project contains tasks done using Bash for program flow.
 - Scripting
 
 ### Author
-- [EWanjau](https://ewanjau.github.io/landing-page/)
-
+- [EWanjau](https://github.com/EWanjau)
