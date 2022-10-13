@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#iterates over 100 items and replaces multiples of 15 , 3, and 5
+
+val=1;
+while [ $val -le 100 ];
+do
+  if [ $((val%15)) = 0 ]; then
+    echo "FizzBuzz"
+  elif [ $((val%3)) = 0 ]; then
+    echo "Fizz"
+  elif [ $((val%5)) = 0 ]; then
+    echo "Buzz"
+  else
+    echo "$val"
+  fi
+  ((val++))
+done
