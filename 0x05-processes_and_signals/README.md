@@ -14,8 +14,7 @@ This project contains tasks that test on signals and computer processes
 - The two signals that cannot be ignored
 ### Key Concept
 ---
- Understanding Systems Processes
----
+Understanding Systems Processes and Interrupts
 
 ### Authors
 ---
