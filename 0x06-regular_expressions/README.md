@@ -1,5 +1,5 @@
 # 0x06. Regular expression
-This project contains tasks that test on signals and computer processes
+This project contains tasks that test on using regular expressions to look for matching words.
 
 ## Concepts
 - Regular expressions
