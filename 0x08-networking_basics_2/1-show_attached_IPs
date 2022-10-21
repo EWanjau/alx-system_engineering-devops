@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #this script shows all IPv4 IPs on the machibe
-ifconfig | awk -F "[: ]" '/inet addr:/ { print $4 }'
+# ifconfig | awk -F "[: ]" '/inet addr:/ { print $4 }'
+ip -4 addr | grep -o '[0-9]\{1,3\}.[0-9]\{1,3\}.[0-9]\{1,3\}.[0-9]\{1,3\}'
