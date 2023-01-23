@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# Fixes a bug to the NGINX installation files
+# Configures an Nginx server to listen on port 80.
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-pkill -1 nginx
+sudo service nginx start
+kill "$(pgrep 'nginx' | head -1)"
