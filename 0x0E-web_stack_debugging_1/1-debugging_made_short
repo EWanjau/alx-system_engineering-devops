@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Fixes a bug to the NGINX installation files
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-kill "$(pgrep 'nginx' | head -1)"
+pkill -1 nginx
