@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
 # script gets to identify the domains and subdomains given domani names
-get_domainname () {
-  result=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | taile -2 | tr '\n' ' ')
-  echo "$2 $result" | awk '{print "The subdomain "$1" is a "$2" record and points to "$3}'
-}
-
-if [ "$#" == 1 ]
+if [ "$#" -gt 1 ];
 then
-    get_domainname "$1" "www"
-    get_domainname "$1" "lb-01"
-    get_domainname "$1" "web-01"
-    get_domainname "$1" "web-02"
-elif [ "$#" == 2 ]
-then
-    get_domainname "$1" "$2"
+    subdomain_list=($2)
+else
+    subdomain_list=(www lb-01 web-01 web-02)
 fi
+for subdomain in "${subdomain_list[@]}"
+do
+    dig_answer=$(dig +nocmd "$subdomain.$1" +noall +answer)
+    destination=$(echo "$dig_answer" | awk -F" " '{print $5}')
+    record_type=$(echo "$dig_answer" | awk -F" " '{print $4}')
+    echo "The subdomain $subdomain is a $record_type record and points to $destination"
+done
