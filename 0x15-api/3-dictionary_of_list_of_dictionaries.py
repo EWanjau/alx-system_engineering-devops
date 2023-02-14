@@ -20,7 +20,7 @@ if __name__ == "__main__":
         for tasks in response_tasks.json():
             tasks_lists.append({"username": user['username'],
                                "task": tasks['title'],
-                               "completed": tasks['completed']})
+                                "completed": tasks['completed']})
 
     with open("todo_all_employees.json", 'w') as json_file:
         json.dump(tasks_lists, json_file)
