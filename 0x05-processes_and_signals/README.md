@@ -1,9 +1,3 @@
-
----
-**Concepts**
-
-*Key Concepts:*
-
 # 0x05. Processes and signals
 This project contains tasks that test on signals and computer processes
 

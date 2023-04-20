@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#script that displays a string indefinitely and receives a signal
+#script that displays a string indefinitely and receives a signal to stop it
 counter=0
 while [ $counter -eq 0 ]
 do
