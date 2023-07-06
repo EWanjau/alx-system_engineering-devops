@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# script gets to identify the domains and subdomains given domani names
+if [ "$#" -gt 1 ];
+then
+    subdomain_list=($2)
+else
+    subdomain_list=(www lb-01 web-01 web-02)
+fi
+for subdomain in "${subdomain_list[@]}"
+do
+    dig_answer=$(dig +nocmd "$subdomain.$1" +noall +answer)
+    destination=$(echo "$dig_answer" | awk -F" " '{print $5}')
+    record_type=$(echo "$dig_answer" | awk -F" " '{print $4}')
+    echo "The subdomain $subdomain is a $record_type record and points to $destination"
+done
