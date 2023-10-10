@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-#displays current directory in a list format
-
-file=$(ls)
-for onefile in $file
-do
-  echo "$onefile" | cut -d '-' -f2
-done

@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#script that displays a string indefinitely and receives a signal
-
-pkill -f 7-highlander
