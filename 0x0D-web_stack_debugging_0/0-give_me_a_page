@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# resolves an issue with the server
-service apache2 start

@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# a script creates a pair of keys stored in school file
-ssh-keygen -t rsa -b 4096 -f school -N betty

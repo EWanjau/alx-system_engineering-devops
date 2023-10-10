@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#the script displays the no of listening ports with their ip address
-ss -lp

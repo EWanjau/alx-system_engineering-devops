@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# checks the identity of the user
- sudo -u "$1" whoami

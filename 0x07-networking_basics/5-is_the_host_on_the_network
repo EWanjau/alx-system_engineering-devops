@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#takes an ip address as an argument and pings it 5-times
-if [ "$#" == "0" ];then
-  echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
-else
-  ping "$1" -c 5
-fi
