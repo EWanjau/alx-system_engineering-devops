@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#script that displays a string indefinitely and receives a signal to stop it
+counter=0
+while [ $counter -eq 0 ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+    trap 'echo "I am invincible!!!"' SIGTERM
+done
