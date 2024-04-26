@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # script changes the ssh configuration file to specific requirements
 Host ubuntu_server
-	Hostname 18.208.119.244
+	Hostname 100.25.157.156
 	Port 22
 	User ubuntu
 	IdentityFile ~/.ssh/school
