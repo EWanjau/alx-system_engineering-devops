@@ -6,9 +6,8 @@ sudo ufw allow 'Nginx HTTP'
 sudo service nginx start
 sudo echo "Hello World Twin!" | sudo tee /var/www/html/index.html
 sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-2.7
-sudo apt-get -y install haproxy=2.7.\*
+sudo apt-get -y install haproxy
 sudo sed -i '11 i ENABLED=1' /etc/default/haproxy
 sudo sed -i '35 a \\nfrontend www\n\tbind   *:80\n\tdefault_backend nginx_pool' /etc/haproxy/haproxy.cfg
 sudo sed -i '39 a \\nbackend nginx_pool\n\tbalance roundrobin\n\tmode http\n\tserver 21967-web-01 18.208.119.244:80 check\n\tserver 21967-web-02 18.208.119.27:80 check' /etc/haproxy/haproxy.cfg
-sudo service haproxy restart
+sudo systemctl restart haproxy.service
