@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 # a script that installs HAproxxy load balancer
 sudo apt-get update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-sudo service nginx start
-sudo echo "Hello World Twin!" | sudo tee /var/www/html/index.html
-sudo apt-get install --no-install-recommends software-properties-common
 sudo apt-get -y install haproxy
 sudo sed -i '11 i ENABLED=1' /etc/default/haproxy
 sudo sed -i '35 a \\nfrontend www\n\tbind   *:80\n\tdefault_backend nginx_pool' /etc/haproxy/haproxy.cfg
