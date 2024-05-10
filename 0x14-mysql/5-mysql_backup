@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
 #gets a backup of mysql databases
-mysqldump -u root --password="$1" --all-databases > backup.sql
-tar -zcvf "$(date '+%d-%m-%Y').tar.gz" backup.sql
+if [ -z "$1" ]
+then
+  sudo echo "The file command is expecting: ./5-mysql_backup <mysql password >"
+  sudo exit 1
+fi
+PASSWORD=$1
+DATE=$(date +%d-%m-%Y)
+
+sudo mysqldump -u root -p$PASSWORD --all-databases > backup.sql
+sudo tar -czvf $DATE.tar.gz backup.sql
+sudo rm backup.sql
